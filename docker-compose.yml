@@ -478,6 +478,7 @@ services:
         mailcow-network:
           aliases:
             - nginx
+        dockploy-network:
 
     acme-mailcow:
       depends_on:
@@ -691,6 +692,8 @@ networks:
       config:
         - subnet: ${IPV4_NETWORK:-172.22.1}.0/24
         - subnet: ${IPV6_NETWORK:-fd4d:6169:6c63:6f77::/64}
+  dokploy-network:
+    external: true
 
 volumes:
   vmail-vol-1:
