@@ -485,7 +485,7 @@ services:
       mailcow-network:
         aliases:
           - nginx
-      dokploy-network:{}
+      dokploy-network: {}
 
   acme-mailcow:
     depends_on:
